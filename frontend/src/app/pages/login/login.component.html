@@ -1,0 +1,49 @@
+<p>
+    <mat-toolbar color="primary">
+      <a routerLink="" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </a>
+      <a class="home_title" routerLink="">Job Portal</a>
+      <span class="example-spacer"></span>
+      <a routerLink="login" mat-stroked-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+        Login
+      </a>
+      <a routerLink="/register" mat-stroked-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Register
+      </a>
+    </mat-toolbar>
+  </p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <mat-card class="card shadow p-3 mb-5 rounded">
+            <mat-card-content>
+            <div class="container text-center">
+                <img src="../../../assets/register_logo.png" alt="">
+            </div>
+            <h1 class="text-center title">Login!!</h1>
+          
+            <form #login="ngForm" (ngSubmit)="loginForm(login.value)">
+
+                <mat-form-field class="full_width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input [(ngModel)]="loginData.u_name" name="u_name" required matInput placeholder="Enter Username">
+                </mat-form-field>
+
+                <mat-form-field class="full_width" appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input [(ngModel)]="loginData.password" name="password" required matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+
+                <!-- <div class="container text-center"> -->
+                    <button type="submit" class="full_width text-center" mat-raised-button color="primary">Login</button>
+                <!-- </div> -->
+            </form>
+        </mat-card-content>
+        </mat-card>
+        </div>
+    </div>
+</div>

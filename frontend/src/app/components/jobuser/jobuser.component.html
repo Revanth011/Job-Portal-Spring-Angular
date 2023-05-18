@@ -1,0 +1,49 @@
+<div class="post" *ngFor="let jobs of job">
+    <div class="post-top">
+        <span class="post-top-title">{{jobs.jname}}</span>
+        <div class="post-top-desc">
+            <span class="post-company">{{jobs.cname}}</span>
+        </div>
+    </div>
+    <div class="post-middle">
+        <div class="post-mid-details">
+            <span class="material-symbols-outlined">work</span>
+            <span class="post-mid-detail">{{jobs.experience}}</span>
+        </div>
+        <div class="post-mid-details">
+            <span class="material-symbols-outlined">
+                currency_rupee
+            </span>
+            <span class="post-mid-detail">{{jobs.salary}}</span>
+        </div>
+        <div class="post-mid-details">
+            <span class="material-symbols-outlined">
+                location_on
+            </span>
+            <span class="post-mid-detail">{{jobs.jlocation}}</span>
+        </div>
+    </div>
+    <div class="post-mid-details">
+        <span class="material-symbols-outlined">
+            description
+        </span>
+        <span class="post-mid-detail">{{jobs.jdescription}}
+        </span>
+    </div>
+    <!-- <div class="post-mid-details">
+        <span class="material-symbols-outlined">
+            description
+        </span>
+        <a class="post-mid-detail"  [href]="jobs.apply_link" target="_blank">{{jobs.apply_link}}
+        </a>
+        <a href="{{jobs.apply_link}}">Go To the Website</a>
+    </div> -->
+    <div  class="post-buttons">
+        <!-- <a routerLink="/user/application"> -->
+            <a href="{{jobs.apply_link}}"><button class="post-apply-btn">Apply</button></a>
+            <!-- <button (click)="delJob(jobs.jname)" class="post-apply-btn">Delete</button> -->
+        <!-- </a> -->
+        <!-- <button class="post-view-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">View
+            Description</button> -->
+    </div>
+</div>

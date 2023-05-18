@@ -1,0 +1,107 @@
+
+            <div class="post" *ngFor="let jobs of job">
+                <div class="post-top">
+                    <span class="post-top-title">{{jobs.jname}}</span>
+                    <div class="post-top-desc">
+                        <span class="post-company">{{jobs.cname}}</span>
+                    </div>
+                </div>
+                <div class="post-middle">
+                    <div class="post-mid-details">
+                        <span class="material-symbols-outlined">work</span>
+                        <span class="post-mid-detail">{{jobs.experience}}</span>
+                    </div>
+                    <div class="post-mid-details">
+                        <span class="material-symbols-outlined">
+                            currency_rupee
+                        </span>
+                        <span class="post-mid-detail">{{jobs.salary}}</span>
+                    </div>
+                    <div class="post-mid-details">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                        <span class="post-mid-detail">{{jobs.jlocation}}</span>
+                    </div>
+                </div>
+                <div class="post-mid-details">
+                    <span class="material-symbols-outlined">
+                        description
+                    </span>
+                    <span class="post-mid-detail">{{jobs.jdescription}}
+                    </span>
+                </div>
+                <!-- <div class="post-mid-details">
+                    <span class="material-symbols-outlined">
+                        description
+                    </span>
+                    <a class="post-mid-detail"  [href]="jobs.apply_link" target="_blank">{{jobs.apply_link}}
+                    </a>
+                    
+                </div> -->
+                <div  class="post-buttons">
+                    <!-- <a routerLink="/user/application"> -->
+                        <!-- <a href="{{jobs.apply_link}}"><button class="post-apply1-btn">Apply</button></a> -->
+                        <button (click)="delJob(jobs.jname)" class="post-apply2-btn">Delete</button>
+                    <!-- </a> -->
+                    <!-- <button class="post-view-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">View
+                        Description</button> -->
+                </div>
+            </div>
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                <div class="modal-post-top-desc">
+                    <span class="modal-post-company"></span>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                                <div class="post">
+                                    <div class="post-middle">
+                                        <div class="post-mid-details">
+                                            <span class="material-symbols-outlined">work</span>
+                                            <span class="post-mid-detail"></span>
+                                        </div>
+                                        <div class="post-mid-details">
+                                            <span class="material-symbols-outlined">
+                                                currency_rupee
+                                            </span>
+                                            <span class="post-mid-detail"></span>
+                                        </div>
+                                        <div class="post-mid-details">
+                                            <span class="material-symbols-outlined">
+                                                location_on
+                                            </span>
+                                            <span class="post-mid-detail"></span>
+                                        </div>
+                                    </div>
+                                    <div class="post-mid-details">
+                                        <span class="material-symbols-outlined">
+                                            description
+                                        </span>
+                                        <span class="post-mid-detail">
+                                        </span>
+                                    </div>
+                                    <div class="post-mid-details">
+                                        <span class="material-symbols-outlined">
+                                            description
+                                        </span>
+                                        <span class="post-mid-detail">
+                                        </span>
+                                    </div>
+                                    <div class="post-buttons">
+                                        <button class="post-apply-btn">Apply</button>
+                                    </div> 
+                                </div>
+                            
+            </div>
+        </div>
+    
+    </div>
+</div> -->

@@ -1,0 +1,75 @@
+<p>
+    <mat-toolbar color="primary">
+      <a routerLink="admin" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </a>
+      <a class="home_title" routerLink="admin" style="color: white">Job Portal</a>
+      <span class="example-spacer"></span>
+      <button data-bs-toggle="modal" data-bs-target="#exampleModal2" mat-stroked-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+        Post Job
+      </button>
+      <a routerLink="" mat-stroked-button class="example-icon favorite-icon mr20" aria-label="Example icon-button with heart icon">
+        Logout
+      </a>
+    </mat-toolbar>
+  </p>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Post A New Job</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="appl">
+                <form (ngSubmit)="postJob()">
+                
+                    <mat-form-field class="full_width text-center" appearance="outline">
+                        <mat-label>Company Name</mat-label>
+                        <input required [(ngModel)]="job.cname" name="cname" matInput placeholder="Enter Company Name">
+                    </mat-form-field>
+    
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Job Name</mat-label>
+                        <input required [(ngModel)]="job.jname" name="jname" matInput placeholder="Enter Job Name">
+                    </mat-form-field>
+    
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Experience</mat-label>
+                        <input type="number" required [(ngModel)]="job.experience" name="experience" matInput placeholder="Enter Experience">
+                    </mat-form-field>
+    
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Salary</mat-label>
+                        <input required type="email" [(ngModel)]="job.salary" name="salary" matInput placeholder="Enter Salary">
+                    </mat-form-field>
+    
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Location</mat-label>
+                        <input required [(ngModel)]="job.jlocation" name="jlocation" matInput placeholder="Enter Location">
+                    </mat-form-field>
+                    
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea required [(ngModel)]="job.jdescription" name="jdescription" matInput placeholder="Enter Description"></textarea>
+                    </mat-form-field>
+
+                    <mat-form-field class="full_width" appearance="outline">
+                        <mat-label>Apply Link</mat-label>
+                        <input required [(ngModel)]="job.apply_link" name="apply_link" matInput placeholder="Enter Apply Link">
+                    </mat-form-field>
+    
+                    <!-- <div class="container text-center"> -->
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close" type="submit" class="post full_width text-center" mat-raised-button color="primary">Post</button>
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    
+    </div>
+</div>
+  
+
+<div class="jobs-main">
+    <app-job></app-job>
+</div>

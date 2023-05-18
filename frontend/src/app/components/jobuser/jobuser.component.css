@@ -1,0 +1,48 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    box-shadow: rgb(99, 99, 99) 0px 10px 10px 6px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #d2e6ecd6;
+  }
+  
+  .post-middle {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .post-mid-details {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .post-apply-btn {
+    border: 1px solid black;
+    border-right: 6px solid rgb(68, 184, 1);
+    border-bottom: 6px solid rgb(68, 184, 1);
+    border-radius: 2rem;
+    width: 8rem;
+  }
+  
+  .post-view-btn {
+    border: 1px solid black;
+    border-right: 6px solid rgb(1, 65, 184);
+    border-bottom: 6px solid rgb(1, 65, 184);
+    border-radius: 2rem;
+    width: 10rem;
+  }
+  
+  .post-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .post-top-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  

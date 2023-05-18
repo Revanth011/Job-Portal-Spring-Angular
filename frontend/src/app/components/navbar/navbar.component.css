@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  button{
+    border-color: whitesmoke;
+  }
+  .home_title{
+    text-decoration: none;
+  }
+  .home_title:visited{
+    color: inherit;
+  }
